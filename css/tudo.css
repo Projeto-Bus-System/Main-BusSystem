@@ -1,0 +1,60 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: #081B48;
+    color: blanchedalmond;
+    font-family: Arial;
+}
+
+input{
+ display: block;
+ height: 55px;
+ width: 400px;
+ margin: 10px;
+ border-radius: 30px;
+ border: 1px solid black;
+ font-size: 14pt;
+ padding: 10px 20px;
+ outline: none;
+ 
+}
+div#corpinhoform{
+    /*background-color: brown;*/
+    width: 420px;
+    margin: 130px auto 0px auto;
+
+}
+div#corpinhoform-cadas{
+    /*background-color: brown;*/
+    width: 420px;
+    margin: 100px auto 0px auto;
+
+}
+div#corpinhoform h1{
+
+    text-align: center;
+    padding: 20px;
+}
+div#corpinhoform-cadas h1{
+
+    text-align: center;
+    padding: 20px;
+}
+a{
+    color: blanchedalmond;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+}
+a:hover{
+    text-decoration:underline;
+}
+
+input[type="submit"]{
+    background-color:#83868D;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
