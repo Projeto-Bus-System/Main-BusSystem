@@ -1,25 +1,73 @@
-<<html lang="pt-br">
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
-    <meta charset="utf-8"/>
-    <title>cadastrando rsrs</title>
-    <link rel="stylesheet"  href="tudo.css">
-
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/bootstrap-css/bootstrap.min.css">
+    <title>Cadastro</title>
 </head>
 <body>
-<div id="corpinhoform-cadas">
-     <h1>Cadastrar</h1>
-    <!--o processamento do bd-->
-    <form method="POST" action="index.php">
-           <input type="text" name="nome" placeholder="Nome Completo" maxlength="30">
-           <input type="text" name="telefone" placeholder="Telefone" maxlength="30"> 
-           <input type="email" name="email" placeholder="Usuário" maxlength="40">
-           <input type="password" name="senha" placeholder="Senha" maxlength="15">
-           <input type="password" name="confsenha" placeholder="Confirmar Senha">
-           <input type="submit" value="Cadastrar">
-        
-    </form>
- </div>
-</body>
+    <div class="content">
+        <h1 class="text-center p-3" >Faça o Cadastro</h1>
+        <div class="container w-50" id='form-cadastro' >
+            <form method="POST">
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="">Primeiro nome</label>
+                    <input type="text" class="form-control"required="" id="inputEmail4">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputPassword4">Primeiro nome</label>
+                    <input type="text" class="form-control" required=""id="inputPassword4">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputAddress">Senha</label>
+                  <input type="password" class="form-control"required="" id="inputPassword4" placeholder="Senhas devem ser fortes">
+                </div>
+                <div class="form-group">
+                  <label for="inputAddress2">Confirmar Senha</label>
+                  <input type="password" class="form-control" required="" id="inputPassword4"  placeholder="Senhas devem ser fortes">
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputEmail4">Email</label>
+                    <input type="email" class="form-control" required="" id="inputEmail4">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="inputState">Ônibus mais frequentado</label>
+                    <select id="inputState" class="form-control">
+                    <option selected>...</option>
 
+                      <option>Del</option>
+                      <option>Fiuza</option>
+
+                      <option>Diu</option>
+
+                      <option>gilberto</option>
+
+                    </select>
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="inputZip">Zip</label>
+                    <input type="text" class="form-control" id="inputZip">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                    <label class="form-check-label" for="gridCheck">
+                      Check me out
+                    </label>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+              </form>
+
+        </div>
+    </div>
+
+    <script src="../js/bootstrap.min.js"></script>
+</body>
 </html>
