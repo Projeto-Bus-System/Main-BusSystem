@@ -1,5 +1,5 @@
 body {
-    background-color: #383A59;
+    background-color: #282A36;
 
 }
 
@@ -9,4 +9,5 @@ body {
 
 #title-cadastro{
     color:#BD93F9;
+    font-weight: bold;
 }
