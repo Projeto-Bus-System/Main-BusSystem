@@ -1,5 +1,5 @@
 # Bus System
-![]("/assets/WhatsApp Image 2020-06-10 at 18.58.20.jpg")
+![]("/assets/logo.jpg")
 
 
 ## Objetivos
