@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    {% block link-head %}
+    {% endblock %}
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="../css/bootstrap-css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/cadastro/style-cadastro.css">
+    {% block title %}
+        <title>Cadastro</title>
+    {% endblock %}
+</head>
+<body>
+    <header>
+        <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark" id="nav-bar">
+            <a class="navbar-brand" href="#">(LOGO)</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item -brand active">
+                        <a class="navbar-brand" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="navbar-brand" href="#">Rotas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="navbar-brand" href="#">Logout</a>
+                    </li>
+                   
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="navbar-brand" href="#">Login</a>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </nav>
+    </header>
+    {% block content %}
+    {% endblock %}
+    
+</body>
+</html>
