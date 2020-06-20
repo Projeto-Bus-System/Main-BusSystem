@@ -12,7 +12,8 @@
         
     
     <title>{% block title %}{% endblock %}</title>
-    
+    {% block link  %}
+    {% endblock %}
 </head>
 <body>
     {% block navbar %}
@@ -49,6 +50,6 @@
     {% endblock %}
     {% block content %}
     {% endblock %}
-    
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
 </body>
 </html>
