@@ -1,7 +1,6 @@
 {% extends 'base_user.html' %}
-{% load static %}
-{% block link  %}
-{% endblock %}
+{% load bootstrap_add %}
+
 
     <title>{% block title %}Cadastro{% endblock %}</title>
 
@@ -9,58 +8,15 @@
     <div class="content">
         <h1 class="text-center p-3" id='title-cadastro'>Faça o Cadastro</h1>
         <div class="container w-50 " id='form-cadastro' >
-            {{form_usuario.as_table}}
-            <!--
-            <form method="POST" >
-                <div class="form-row">
-                    <div class="form-group col-md-6 text-white">
-                        <label for="">Primeiro nome</label>
-                        <input type="text" class="form-control"required="" placeholder="Joao Marcos" id="inputEmail4">
-                    </div>
-                    <div class="form-group col-md-6 text-white">
-                        <label for="inputPassword4">Primeiro nome</label>
-                        <input type="text" class="form-control" placeholder="Silva do Santos" required=""id="inputPassword4">
-                    </div>
-                </div>
-                <div class="form-group text-white">
-                    <label for="inputAddress">Senha</label>
-                    <input type="password" class="form-control"required="" id="inputPassword4" placeholder="Senhas devem ser fortes">
-                </div>
-                <div class="form-group text-white">
-                    <label for="inputAddress2">Confirmar Senha</label>
-                    <input type="password" class="form-control" required="" id="inputPassword4"  placeholder="Senhas devem ser fortes">
-                </div>
-                <div class="form-group text-white">
-                    <label for="telfone">Telefone</label>
-                    <input type="text" class="form-control" required="" placeholder="7799848939">
-                </div>
-                <div class="form-group text-white">
-                    <label for="telfone">Telefone responsável</label>
-                    <input type="text" class="form-control" required="" placeholder="7799848939">
-                </div>
-                <div class="form-row text-white">
-                    <div class="form-group col-md-6">
-                        <label for="inputEmail4">Email</label>
-                        <input type="email" class="form-control"placeholder="ex:onibus_if@gmail.com " required="" id="inputEmail4">
-                    </div>
-                    
-                    <div class="form-group col-md-4">
-                        <label for="inputState">Ônibus mais frequentado</label>
-                        <select id="inputState" class="form-control">
-                            <option selected>...</option>
-
-                            <option>Del</option>
-                            <option>Fiuza</option>
-                            <option>Diu</option>
-                            <option>gilberto</option>
-
-                        </select>
-                    </div>
-                
-                </div>
             
+            
+            <form method="POST" >
+                {% csrf_token %}
+                
+                
+                {{form_usuario}}
                 <button type="submit" class="btn btn-success">Enviar</button>
-            </form>-->
+            </form>
         </div>
         
     </div>
