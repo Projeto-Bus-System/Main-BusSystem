@@ -6,11 +6,11 @@ from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 class AlunoForm(forms.ModelForm):
     class Meta:
         model = Aluno
-        fields = '__all__'
-
+        fields = ('telefone','telefone_responsavel','ponto','matricula')
+        
 class UserForm(UserCreationForm):
     class Meta:
         model = User
-        fields = ['username','first_name','last_name','password','email']
+        fields = ('username','first_name','last_name','password1','email','password2')
 
        
