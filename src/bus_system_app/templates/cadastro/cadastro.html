@@ -14,52 +14,63 @@
                     <label>Username</label>
                     {{ form_usuario.username|addClass:'form-control'}}
                 </div>
+                <div class="row">
+                    <div class="form-group col">
+                        <label>Primeiro Nome</label>
+                        {{ form_usuario.first_name|addClass:'form-control'}}
+                    </div>
+                    <div class="form-group col">
+                        <label>Último nome</label>
+                        {{ form_usuario.last_name|addClass:'form-control'}}
+                    </div>
+                </div>
                 
-                <div class="form-group">
-                    <label>Primeiro Nome</label>
-                    {{ form_usuario.first_name|addClass:'form-control'}}
-                </div>
-                <div class="form-group">
-                    <label>Último nome</label>
-                    {{ form_usuario.last_name|addClass:'form-control'}}
-                </div>
                 <div class="form-group">
                     <label>Email</label>
                     {{ form_usuario.email|addClass:'form-control'}}
                 </div>
-                <div class="form-group">
-                    <label>Senha</label>
-                    {{ form_usuario.password1|addClass:'form-control'}}
-                </div>
-                <div class="form-group">
-                    <label>Confirmar Senha</label>
-                    {{ form_usuario.password2|addClass:'form-control'}}
-                </div>
-                <div class="form-group">
-                    <label>Telefone Responsável</label>
-                    {{ form_aluno.telefone_responsavel|addClass:'form-control'}}
-                </div>
-                <div class="form-group">
-                    <label>Telefone</label>
-                    {{ form_aluno.telefone|addClass:'form-control'}}
-                </div>
-                <div class="form-group">
-                    <label>Matrícula</label>
-                    {{ form_aluno.matricula|addClass:'form-control'}}
-                </div>
-                <div class="form-group">
-                    <label>Ponto mais usado</label>
-                    {{ form_aluno.ponto|addClass:'form-control'}}
-                </div>
-            
-                <div class="form-group">
-                    <h1>So erro agora</h1>
-                    {{form_usuario.errors}}
-                    {{form_aluno.errors}}
+                <div class="row">
 
+                    <div class="form-group col">
+                        <label>Senha</label>
+                        {{ form_usuario.password1|addClass:'form-control'}}
+                    </div>
+                    <div class="form-group col">
+                        <label>Confirmar Senha</label>
+                        {{ form_usuario.password2|addClass:'form-control'}}
+                    </div>
                 </div>
+                <div class="row">
+
+                    <div class="form-group col">
+                        <label>Telefone Responsável</label>
+                        {{ form_aluno.telefone_responsavel|addClass:'form-control'}}
+                    </div>
+                    <div class="form-group col">
+                        <label>Telefone</label>
+                        {{ form_aluno.telefone|addClass:'form-control'}}
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="form-group col">
+                        <label>Matrícula</label>
+                        {{ form_aluno.matricula|addClass:'form-control'}}
+                    </div>
+                    <div class="form-group col">
+                        <label>Ponto mais usado</label>
+                        {{ form_aluno.ponto|addClass:'form-control'}}
+                    </div>
+                </div>
+
+                <div class="alert alert-danger" role="alert">
+                    <h4>Não foi possivel realizar cadastro por:</h4>
+                    <h5 class="text-center">{{ form_aluno.errors }}</h5>
+                    <h5 class="text-center">{{ form_usuario.errors }}</h5>
+                </div>
+
                 <div class="form-group">
-                    <button type="submit" class="btn btn-success">Enviar</button>
+                    <button type="submit" class="btn btn-success btn-lg btn-block">Enviar</button>
                 </div>
             </form>
         </div>
