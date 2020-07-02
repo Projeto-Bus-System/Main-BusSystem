@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'bus_system_app'
+    'bus_system_app',
+    'leaflet',
+    'six'
 ]
 
 MIDDLEWARE = [
@@ -123,3 +125,11 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static/"),
 ]
+
+LEAFLET_CONFIG = {
+    # conf here
+    'DEFAULT_CENTER': (-14.2280797, -42.7825589),
+    'DEFAULT_ZOOM': 12,
+    'MIN_ZOOM': 3,
+    'MAX_ZOOM': 18,
+}

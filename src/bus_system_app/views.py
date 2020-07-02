@@ -27,3 +27,6 @@ def cadastro_user(request):
 def login_user(request):
     
     return render(request, 'login/login.html',{})
+
+def render_map(request):
+    return render(request, 'mapa/mapa.html')

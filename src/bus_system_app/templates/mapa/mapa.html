@@ -1,15 +1,30 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+{% load leaflet_tags %}
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../css/bootstrap-css/bootstrap.min.css">
-
+   
+        {% leaflet_js %}
+        {% leaflet_css %}
+    
     <title>Mapa</title>
+   
 </head>
 <body>
-    <script src="../js/bootstrap.min.js"></script>
+    {% leaflet_map "yourmap" %}
 
+
+    <script src="../js/bootstrap.min.js"></script>
+    <script>
+        function map_init_basic (map, options) {
+            
+            L.marker([50.5, 30.5]).addTo(map);
+        
+        }
+    </script>
+    
 </body>
 </html>
