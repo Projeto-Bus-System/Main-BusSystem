@@ -1,6 +1,6 @@
 from django.shortcuts import render, HttpResponse, redirect
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
-from .forms import AlunoForm,UserForm
+from ..forms import AlunoForm,UserForm
 
 
 def cadastro_user(request):
@@ -13,7 +13,7 @@ def cadastro_user(request):
             save_form_aluno.aluno_usuario = save_form_usuario
             save_form_aluno.save()
             
-            return redirect('cadastro_user')
+            return redirect('RendezirarMapa')
     else:
         form_usuario = UserForm()
         form_aluno = AlunoForm()

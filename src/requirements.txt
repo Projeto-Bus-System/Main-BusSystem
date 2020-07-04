@@ -1,6 +1,5 @@
 asgiref==3.2.9
 Django==3.0.7
-django-leaflet==0.26.0
 django-six==1.0.4
 django-utils==0.0.2
 pytz==2020.1

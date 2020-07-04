@@ -25,7 +25,7 @@ SECRET_KEY = '1rs8s)$b%#(y+vvu9sql%j87^psk-!0^v*o$w=)!2dy4k+yf*f'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'bus_system_app',
-    'leaflet',
     'six'
 ]
 
@@ -107,13 +106,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
 LANGUAGE_CODE = 'pt-br'
-
 TIME_ZONE = 'UTC'
-
 USE_I18N = True
-
 USE_L10N = True
-
 USE_TZ = True
 
 
@@ -125,11 +120,3 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static/"),
 ]
-
-LEAFLET_CONFIG = {
-    # conf here
-    'DEFAULT_CENTER': (-14.2280797, -42.7825589),
-    'DEFAULT_ZOOM': 12,
-    'MIN_ZOOM': 3,
-    'MAX_ZOOM': 18,
-}
