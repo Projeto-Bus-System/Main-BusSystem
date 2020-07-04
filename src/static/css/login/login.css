@@ -1,0 +1,43 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: #04050e;
+    color: blanchedalmond;
+    font-family: Arial;
+}
+
+input{
+ display: block;
+ height: 55px;
+ width: 400px;
+ margin: 10px;
+ border-radius: 30px;
+ border: 1px solid black;
+ font-size: 14pt;
+ padding: 10px 20px;
+ outline: none;
+ 
+}
+div#corpinhoform{
+    /*background-color: brown;*/
+    width: 420px;
+    margin: 130px auto 0px auto;
+}
+div#corpinhoform h1{
+
+    text-align: center;
+    padding: 20px;
+}
+a:hover{
+   
+    text-decoration:underline;
+}
+
+input[type="submit"]{
+    background-color:#22242d;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
