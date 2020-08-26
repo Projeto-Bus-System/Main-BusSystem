@@ -1,0 +1,12 @@
+{% extends 'base_account.html' %}
+
+{% block content %}
+
+<form  method="post">
+    {%csrf_token%}
+    {{form_student.as_p}}
+    <button>send</button>
+</form>
+
+{% endblock %}
+

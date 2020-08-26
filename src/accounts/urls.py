@@ -1,7 +1,7 @@
 from django.urls import path, include
-from accounts.views import render_user
+from accounts.views import createStudent
 
 urlpatterns = [
-    path('criar-conta/', render_user ,name="CriarConta"),
+    path('criar-conta/', createStudent ,name="CriarConta"),
 
 ]
