@@ -7,8 +7,9 @@ from django.contrib.auth.forms import UserCreationForm,AuthenticationForm
 class FormCreateStudent(forms.ModelForm):
     class Meta:
         model = Student
-        fields = "__all__"
-    
+        fields = ['matricula','ponto','telefone','telefone_responsavel']
+        
+
 class FromCreateUser(UserCreationForm):
     class Meta:
         model = User

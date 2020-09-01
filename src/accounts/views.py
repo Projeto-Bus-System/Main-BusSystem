@@ -8,25 +8,12 @@ def createStudent(request):
         form_student = FormCreateStudent(request.POST)
         form_user = FromCreateUser(request.POST)
 
-
-        if form_student.is_valid() & form_user.is_valid():
-
-
-            try:
-                form_student.save(commit=False)
-            except:
-                return HttpResponse(status=501)
-
-
-            try:
-                form_user.save(commit=False)
-            except:
-                return HttpResponse(status=501)
-
-                
-            form_student.save()
-            form_user.save()
-            return HttpResponse(status=200)
+        if form_student.is_valid() and form_user.is_valid():
+            save_user = form_user.save()
+            save_student = form_student.save(commit=False)
+            save_student.user_id = save_user
+            save_student.save()
+            return redirect('/')
         else:   
             return HttpResponse(status=500)
 
