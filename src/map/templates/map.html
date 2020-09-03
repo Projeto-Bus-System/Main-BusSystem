@@ -40,10 +40,6 @@
 
             function success(pos) {
                 var crd = pos.coords;
-                console.log('Sua posição atual é:');
-                console.log('Latitude : ' + crd.latitude);
-                console.log('Longitude: ' + crd.longitude);
-                console.log('Mais ou menos ' + crd.accuracy + ' metros.');
                 render_map(crd.longitude, crd.latitude, crd.accuracy)
             };
             
@@ -51,11 +47,8 @@
                 console.warn('ERROR(' + err.code + '): ' + err.message);
                 window.alert('Houve um erro: '+err.message )
             };
-
             navigator.geolocation.getCurrentPosition(success, error, options);
 
-
-            
             function render_map(longitude,latitude){
                 var mymap = L.map('mapid').setView([latitude, longitude],16 );
                 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1Ijoib3J1YW5wYiIsImEiOiJja2M4MXc3MXoxN2IyMnhwMnNjbnh3aHBnIn0.nJ8PoNWFm2W8rsnehCiKoQ', {
@@ -67,10 +60,28 @@
                     accessToken: 'your.mapbox.access.token'
                 }).addTo(mymap);   
                 define_icon(latitude,longitude, mymap) 
+                return mymap;
             }
             function define_icon(latitude, longitude, mymap){
                 L.marker([latitude, longitude]).addTo(mymap);
             }
+
+            const mymap = () =>{
+
+                
+
+            }
+
+            function get_cordinates(mymap){
+                mymap.on('click', function(e){
+                    var coord = e.latlng;
+                    var lat = coord.lat;
+                    var lng = coord.lng;
+                    define_icon(lat,lng, mymap)
+                    console.log("You clicked the map at latitude: " + lat + " and longitude: " + lng);
+                });
+            }
+            get_cordinates(render_map)
         }
     </script>
 </body>
